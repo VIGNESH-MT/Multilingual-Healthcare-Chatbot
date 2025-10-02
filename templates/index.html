@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Healthcare Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-heartbeat"></i>
+                    <h1>Healthcare Assistant</h1>
+                </div>
+                <div class="language-selector">
+                    <label for="language-select">
+                        <i class="fas fa-globe"></i>
+                        Language:
+                    </label>
+                    <select id="language-select">
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="es">Español</option>
+                        <option value="hi">हिन्दी</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Chat Interface -->
+        <main class="main-content">
+            <!-- Chat Messages Container -->
+            <div class="chat-container" id="chat-container">
+                <div class="welcome-message">
+                    <div class="bot-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <h3>Welcome to Healthcare Assistant!</h3>
+                        <p>I'm here to help you with healthcare questions and information. You can ask me about:</p>
+                        <ul>
+                            <li>Symptoms and conditions</li>
+                            <li>Medications and treatments</li>
+                            <li>Prevention and wellness</li>
+                            <li>Emergency situations</li>
+                            <li>Mental health support</li>
+                        </ul>
+                        <p><strong>Note:</strong> This chatbot provides general information only. For medical emergencies, please contact emergency services immediately.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-container">
+                    <input type="text" id="user-input" placeholder="Ask me about your health concerns..." maxlength="500">
+                    <button id="send-button" type="button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="input-info">
+                    <span class="char-counter">0/500</span>
+                    <span class="typing-indicator" id="typing-indicator" style="display: none;">
+                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-circle"></i>
+                        Assistant is typing...
+                    </span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Quick Actions</h3>
+                <button class="sidebar-toggle" id="sidebar-toggle">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-content">
+                <!-- Quick Questions -->
+                <div class="quick-questions">
+                    <h4>Common Questions</h4>
+                    <button class="quick-question" data-question="What are the symptoms of flu?">
+                        <i class="fas fa-thermometer-half"></i>
+                        Flu Symptoms
+                    </button>
+                    <button class="quick-question" data-question="How can I prevent getting sick?">
+                        <i class="fas fa-shield-alt"></i>
+                        Prevention Tips
+                    </button>
+                    <button class="quick-question" data-question="When should I go to the emergency room?">
+                        <i class="fas fa-ambulance"></i>
+                        Emergency Signs
+                    </button>
+                    <button class="quick-question" data-question="How can I manage stress?">
+                        <i class="fas fa-brain"></i>
+                        Stress Management
+                    </button>
+                </div>
+
+                <!-- Statistics -->
+                <div class="stats-section">
+                    <h4>Chat Statistics</h4>
+                    <div class="stat-item">
+                        <span class="stat-label">Total Queries:</span>
+                        <span class="stat-value" id="total-queries">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Avg Accuracy:</span>
+                        <span class="stat-value" id="avg-accuracy">0%</span>
+                    </div>
+                    <button id="refresh-stats" class="refresh-btn">
+                        <i class="fas fa-sync-alt"></i>
+                        Refresh Stats
+                    </button>
+                </div>
+
+                <!-- Emergency Contacts -->
+                <div class="emergency-section">
+                    <h4>Emergency Contacts</h4>
+                    <div class="emergency-contact">
+                        <strong>Emergency Services:</strong> 911
+                    </div>
+                    <div class="emergency-contact">
+                        <strong>Poison Control:</strong> 1-800-222-1222
+                    </div>
+                    <div class="emergency-contact">
+                        <strong>Crisis Hotline:</strong> 988
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loading-overlay" style="display: none;">
+            <div class="loading-spinner">
+                <i class="fas fa-heartbeat"></i>
+                <p>Initializing Healthcare Assistant...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

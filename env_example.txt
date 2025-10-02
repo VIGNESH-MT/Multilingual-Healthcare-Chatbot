@@ -1,0 +1,29 @@
+# Multilingual Healthcare Chatbot Configuration
+# Copy this file to .env and customize as needed
+
+# Flask Configuration
+SECRET_KEY=healthcare-chatbot-secret-key-2024
+DEBUG=False
+
+# Database Configuration
+DATABASE_PATH=chatbot_logs.db
+
+# Translation Settings
+TRANSLATION_CACHE_SIZE=1000
+MAX_TRANSLATION_LENGTH=512
+
+# Logging Configuration
+LOG_LEVEL=INFO
+LOG_FILE=chatbot.log
+
+# API Settings
+MAX_MESSAGE_LENGTH=500
+RATE_LIMIT_PER_MINUTE=60
+
+# Healthcare FAQ Settings
+FAQ_CONFIDENCE_THRESHOLD=0.1
+MAX_FAQ_RESULTS=5
+
+# Model Settings
+DEVICE=auto
+MODEL_CACHE_DIR=./models
