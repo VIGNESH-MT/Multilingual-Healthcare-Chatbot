@@ -73,6 +73,7 @@ Observability, Audit & Billing
 
 
 The platform is organized into **clearly separated enterprise layers**:
+```bash
 Multilingual Healthcare Chatbot /
 │
 ├── README.md                      # Executive overview
@@ -165,7 +166,7 @@ Multilingual Healthcare Chatbot /
     ├── contracts/
     ├── dpa/
     └── privacy/
-
+```
 
 This structure follows **enterprise AI operating models**, not open-source hobby conventions.
 
