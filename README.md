@@ -15,14 +15,14 @@ The platform is delivered as a **consulting-led AI infrastructure solution**, no
 
 ## What This Platform Is (and Is Not)
 
-### ✅ What This Platform Is
+### What This Platform Is
 - A **governed AI system** designed for enterprise deployment
 - A **policy-driven AI orchestration layer**
 - A **multi-tenant, compliance-ready AI foundation**
 - A **consulting-grade implementation framework**
 - A **control plane for AI decision-making**
 
-### ❌ What This Platform Is Not
+### What This Platform Is Not
 - A generic chatbot
 - A demo AI project
 - A single-model application
