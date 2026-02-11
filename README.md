@@ -290,3 +290,13 @@ It is intentionally structured to:
 If you are evaluating AI for serious, production-grade use — this platform is built for that reality.
 
 ---
+
+## Ownership
+
+Maintained by:
+
+Vignesh Murugesan  
+AI / Data Science Engineer  
+
+Focus Areas:  
+Decision Intelligence · Explainable AI · Governed Machine Learning
