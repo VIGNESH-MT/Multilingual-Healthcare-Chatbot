@@ -12,7 +12,6 @@ Unlike typical AI projects or chatbots, this platform is built around **risk con
 The platform is delivered as a **consulting-led AI infrastructure solution**, not a standalone software tool.
 
 ---
-
 ## What This Platform Is (and Is Not)
 
 ### What This Platform Is
